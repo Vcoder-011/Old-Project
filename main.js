@@ -20,8 +20,6 @@ function energyClock(){
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1)/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
 
-
-
 function gainOneDimeMatter(){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost){
         if(gameData.OneDimeParticle<gameData.OneDimeLength){
