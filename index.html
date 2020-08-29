@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <title>Dimension Breaker Idle</title>
+        <style>
+            p{
+                color:white
+            }
+        </style>
+    </head>
+
+    <body style="background-color: black;">
+        <h1 style="color:red; border: 2px solid white; padding: 10px">Dimension Breaker Idle</h1>
+        <p>You are a 1st dimenesional god like entity. You don't know why you are here but you know you don't like being only long, you want width and height and even more!<br> You can make matter/darkmatter with the engery that produces from your body. It is little now, but with time you can produce more energy and produce more matter. <br>(Little note:The laws of the universe do not apply to you.)</p>
+        <br>
+        <h3 id="PercentTill2D"style="color:red">You are currently 0% until you can access the second dimension!</h3>
+        <br>
+        <p id="CMC" style="color:lightblue;">Particle Count: 0</p>
+        <br>
+        <p id="EC" style="color:gold">Energy Count: 0. You gain 0E/s</p>
+        <br>
+        <p id="LoTU" style="color:purple">Length of the Universe: 100 Meters. You gain 0M/s</p>
+        <br>
+        <p>Matter, its what makes up your universe. But there isn't enough. How about you make some!<br>Tip: Hold down enter to buy lots of particals!</p>
+        <button id="1DParticle" onclick="gainOneDimeMatter()">1 Particle for 100 energy</button>
+        <button id="1DParticle10" onclick="gainOneDimeMatter10()">10 Particle for 1,000 energy</button>
+        <button id="1DParticle100" onclick="gainOneDimeMatter100()">100 Particle for 10,000 energy</button>
+        <br>
+        <p id="dmtxt">Dark Matter, its what makes your universe expand. But there isn't enough. How about you make some!<br>Total Dark Matter:0</p>
+        <button id="1DDP" onclick="gainOneDimeDMatter()">0.1 Dark Matter for 100 energy </button>
+        <button id="1DDP10" onclick="gainOneDimeDMatter10()">1 Dark Matter for 1,000 energy </button>
+        <button id="1DDP100" onclick="gainOneDimeDMatter100()">10 Dark Matter for 10,000 energy </button>
+        <br>
+        <h3 style="color:white; border:2px solid white; height:50px;width:1020px;">Atoms are objects you can make with particles. The first atom can produce gravitational enegry that you can make into energy. <br>The second atom will produce atom one and third will produce second, and so on and so forth.</h3>
+        <p id="atom1">Atom 1 is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom prduced 100E/s</p> 
+        <p id="atomtotal">Total Atoms: 0</p>
+        <button id="atom01" onclick="formAtom1()">Form 1 Atom 1 for 100 particles</button>
+        <button id="atom0110" onclick="formAtom110()">Form 10 Atom 1 for 1,000 particles</button>
+        <button id="atom01100" onclick="formAtom1100()">Form 100 Atom 1 for 10,000 particles</button>
+        <br>
+        <button id="atom001" onclick="Atom1Rename()">Rename Atom 1!</button>
+        <script src="main.js" charset="utf-8" type="text/javascript"></script>
+    </body>
+
+</html>
