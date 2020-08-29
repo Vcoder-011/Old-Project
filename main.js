@@ -21,6 +21,7 @@ function energyClock(){
 }
 
 
+
 function gainOneDimeMatter(){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost){
         if(gameData.OneDimeParticle<gameData.OneDimeLength){
