@@ -5,19 +5,18 @@ function energyClock(){
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100))/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
 
-/*onclick=setInterval(move(), 10)
-function move() {
-    var a=gameData.OneDimeParticle
-    var b=gameData.OneDimeLength
-    if(a/b<=1)
+onclick=setInterval(move(), 100)
+  function move(){
+   var length=gameData.OneDimeLength
+   var particle=gameData.OneDimeParticle
+    if(particle/length<=1)
       var elem = document.getElementById("myBar");
-          width =((a/b)*1000)
+          width =((particle/length)*1000)
+          widthbartext=(width/10).toFixed(2)
           elem.style.width = width + "px";
-          elem.innerHTML = width/10 + "%";
+          elem.innerHTML = widthbartext + "%";
         }
 
-        save this until i find and answer
-*/
 function gainOneDimeMatter(qty){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty){
         if(gameData.OneDimeParticle<gameData.OneDimeLength){
