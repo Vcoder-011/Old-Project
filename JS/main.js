@@ -1,3 +1,4 @@
+'use strict';
 gameData={
 OneDimeParticle:0,
 OneDimeParticleGain:1,

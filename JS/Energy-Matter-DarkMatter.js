@@ -1,3 +1,5 @@
+'use strict';
+
 onclick=setInterval(energyClock, 100)
 function energyClock(){
     gameData.OneDimeEnergy+=10*gameData.OneDimeGodAura+((gameData.OneDimeAtom1*100)*gameData.OneDimeGodAura)
@@ -5,7 +7,7 @@ function energyClock(){
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100))/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
 
-onclick=setInterval(move(), 10)
+/*onclick=setInterval(move(), 10)
 function move() {
     var a=gameData.OneDimeParticle
     var b=gameData.OneDimeLength
@@ -15,7 +17,9 @@ function move() {
           elem.style.width = width + "px";
           elem.innerHTML = width/10 + "%";
         }
-
+        
+        save this until i find and answer
+*/
 function gainOneDimeMatter(qty){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty){
         if(gameData.OneDimeParticle<gameData.OneDimeLength){
