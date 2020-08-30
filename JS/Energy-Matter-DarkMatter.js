@@ -5,28 +5,29 @@ function energyClock(){
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100))/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
 
-onclick=setInterval(move, 100)
+onclick=setInterval(move, 10)
   function move(){
    var length=gameData.OneDimeLength
-   var particle=gameData.OneDimeParticle
-    if(particle/length<=1)
+   var matter=gameData.OneDimeParticle+(gameData.OneDimeAtom1*100)
+    if(matter/length<1){
       var elem = document.getElementById("myBar");
-          width =((particle/length)*1000)
+          width =((matter/length)*1000).toFixed(2)
           widthbartext=(width/10).toFixed(2)
           elem.style.width = width + "px";
           elem.innerHTML = widthbartext + "%";
         }
-
+    }
 function gainOneDimeMatter(qty){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty){
-        if(gameData.OneDimeParticle<gameData.OneDimeLength){
+        if(((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)<gameData.OneDimeLength){
     gameData.OneDimeParticle+=gameData.OneDimeParticleGain*gameData.OneDimeGodPower*qty
     gameData.OneDimeEnergy-=gameData.OneDimeParticleCost*qty
-    document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle
+    document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle.toFixed(0) +"("+((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toFixed(0)+")"
+    document.getElementById("CMC2").innerHTML="Particle Count: "+gameData.OneDimeParticle.toFixed(0) +"("+((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toFixed(0)+")"
     document.getElementById("EC").innerHTML="Energy Count: "+gameData.OneDimeEnergy+". You gain "+((gameData.OneDimeGodAura*10*10)+gameData.OneDimeAtom1*100*gameData.OneDimeGodAura).toFixed(1)+"E/s"
         }
         
-        else if(gameData.OneDimeParticle>=gameData.OneDimeLength){
+        else if(((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)>=gameData.OneDimeLength){
             alert("You need to make the universe longer for you to produce more matter")
         }
     }

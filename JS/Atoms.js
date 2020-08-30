@@ -1,13 +1,19 @@
 function formAtom1(qty){
     if(gameData.OneDimeParticle>=gameData.OneDimeAtom1Cost*qty){
+        if(((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)<=gameData.OneDimeLength){
         gameData.OneDimeAtom1+=1*qty
-        gameData.OneDimeParticle-=gameData.OneDimeAtom1Cost*qty
+        gameData.OneDimeParticle-=gameData.OneDimeAtom1Cost*qty}
+
+        else if(((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)>gameData.OneDimeLength){
+            alert("You need to make the universe longer for you to produce more matter")
+        }
     }
     else if(gameData.OneDimeParticle<gameData.OneDimeDMCost*qty){
         alert("You need more particles to make that atom")
     }
     document.getElementById("atomtotal").innerHTML="Total Atoms: "+gameData.OneDimeAtom1
-    document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle
+    document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle.toFixed(0) +"("+((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toFixed(0)+")"
+    document.getElementById("CMC2").innerHTML="Particle Count: "+gameData.OneDimeParticle.toFixed(0) +"("+((gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toFixed(0)+")"
 }
 
 function Atom1Rename(){
