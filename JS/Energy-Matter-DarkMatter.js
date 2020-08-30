@@ -5,7 +5,7 @@ function energyClock(){
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100))/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
 
-onclick=setInterval(move(), 100)
+onclick=setInterval(move, 100)
   function move(){
    var length=gameData.OneDimeLength
    var particle=gameData.OneDimeParticle
