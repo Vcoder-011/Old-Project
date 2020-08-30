@@ -1,5 +1,3 @@
-'use strict';
-
 function formAtom1(qty){
     if(gameData.OneDimeParticle>=gameData.OneDimeAtom1Cost*qty){
         gameData.OneDimeAtom1+=1*qty

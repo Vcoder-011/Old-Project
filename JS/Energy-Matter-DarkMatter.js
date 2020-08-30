@@ -1,5 +1,3 @@
-'use strict';
-
 onclick=setInterval(energyClock, 100)
 function energyClock(){
     gameData.OneDimeEnergy+=10*gameData.OneDimeGodAura+((gameData.OneDimeAtom1*100)*gameData.OneDimeGodAura)
@@ -17,7 +15,7 @@ function move() {
           elem.style.width = width + "px";
           elem.innerHTML = width/10 + "%";
         }
-        
+
         save this until i find and answer
 */
 function gainOneDimeMatter(qty){
