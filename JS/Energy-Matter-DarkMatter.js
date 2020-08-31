@@ -75,7 +75,7 @@ if(a*1>=1){
     document.getElementById("1DDP").innerHTML= (bMBM/10).toFixed(0)+" Dark Matter for "+(100*bMBM).toFixed(0)+" energy"
     document.getElementById("1DDP10").innerHTML= (1*bMBM).toFixed(0)+" Dark Matter for "+(1000*bMBM).toFixed(0)+" energy"
     document.getElementById("1DDP100").innerHTML= (10*bMBM).toFixed(0)+" Dark Matter for "+(10000*bMBM).toFixed(0)+" energy"
-    document.getElementById("1DbuyMultiDm").innerHTML= "Buy Multi, Current Multi: "+bMBM
+    document.getElementById("1DbuyMultiDm").innerHTML= "Buy Multi, Current Multi: "+bMBM+"NOTE: THIS DOES NOT WORK QUITE YET"
 }
 else{
     alert("Please try again.")
