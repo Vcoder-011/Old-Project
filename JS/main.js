@@ -10,7 +10,9 @@ OneDimeLength:100,
 OneDimeGodPower:1,
 OneDimeGodAura:1,
 OneDimeAtom1:0,
-OneDimeAtom1Cost:100
+OneDimeAtom1Cost:100,
+OneDimeAtom2:0,
+OneDimeAtom2Cost:100000
 }
 
 function tab(tab) {
