@@ -33,6 +33,7 @@ document.getElementById("atom1").innerHTML=atomprompt1+" is a very small line of
 document.getElementById("atom01").innerHTML="Form "+(1*bMA).toExponential(1)+" "+atomprompt1+" for "+(100*bMA).toExponential(1)+" particles"
 document.getElementById("atom0110").innerHTML="Form "+(10*bMA).toExponential(1)+" "+atomprompt1+" for "+(1000*bMA).toExponential(1)+" particles"
 document.getElementById("atom01100").innerHTML="Form "+(100*bMA).toExponential(1)+" "+atomprompt1+" for "+(10000*bMA).toExponential(1)+" particles"
+document.getElementById("atom2").innerHTML=atomprompt2+" is a very long and bends time and space. With the huge amount of gravitational energy that surrounds it, "+atomprompt1+" comes into existence at an extremly large rate. Each "+atomprompt2+" produces 1.0e+10 "+atomprompt1+" /s"
 document.getElementById("atom001").innerHTML="Rename "+atomprompt1
 }
 //Atom 2
@@ -75,7 +76,7 @@ else{
 var atomprompt2="Atom 2"
 function Atom2Rename(){
 atomprompt2=prompt("What would you like to name your atom?")
-document.getElementById("atom2").innerHTML=atomprompt2+" is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 100E/s"
+document.getElementById("atom2").innerHTML=atomprompt2+" is a very long and bends time and space. With the huge amount of gravitational energy that surrounds it, "+atomprompt1+" comes into existence at an extremly large rate. Each "+atomprompt2+" produces 1.0e+10 "+atomprompt1+" /s"
 document.getElementById("atom02").innerHTML="Form "+(1*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e12*bMA2).toExponential(1)+" particles"
 document.getElementById("atom0210").innerHTML="Form "+(10*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e13*bMA2).toExponential(1)+" particles"
 document.getElementById("atom02100").innerHTML="Form "+(100*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e14*bMA2).toExponential(1)+" particles"
