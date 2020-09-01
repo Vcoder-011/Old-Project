@@ -5,47 +5,33 @@ function energyClock(){
     document.getElementById("EC").innerHTML="Energy Count: "+gameData.OneDimeEnergy.toExponential(1)+". You gain "+(10*10*gameData.OneDimeGodAura+((gameData.OneDimeAtom1*100)*gameData.OneDimeGodAura)).toExponential(1)+"E/s"
     document.getElementById("PercentTill2D").innerHTML="You are currently "+((Math.log10(gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100)+(gameData.OneDimeAtom2*1e12))/Math.log10(1.7e308))*100).toFixed(3)+"% until you can access the second dimension!"
 }
-//fill bar
-onclick=setInterval(move, 10)
-  function move(){
-   var length=gameData.OneDimeLength
-   var matter=gameData.OneDimeParticle+(gameData.OneDimeAtom1*100)+(gameData.OneDimeAtom2*1e12)
-    if(matter/length<=1){
-      var elem = document.getElementById("myBar");
-          width =((matter/length)*1000).toFixed(2)
-          widthbartext=(width/10).toFixed(2)
-          elem.style.width = width + "px";
-          elem.innerHTML = widthbartext + "%";
-        }
-    }
 //matter
 function gainOneDimeMatter(qty){
-    if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty*bMM){
-        if(((gameData.OneDimeAtom1*100)+qty*bMM+gameData.OneDimeParticle)<=gameData.OneDimeLength){
-    gameData.OneDimeParticle+=gameData.OneDimeParticleGain*gameData.OneDimeGodPower*qty*bMM
-    gameData.OneDimeEnergy-=gameData.OneDimeParticleCost*qty*bMM
+    if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty*gameData.bMM){
+        if(((gameData.OneDimeAtom1*100)+qty*gameData.bMM+gameData.OneDimeParticle)<=gameData.OneDimeLength){
+    gameData.OneDimeParticle+=gameData.OneDimeParticleGain*gameData.OneDimeGodPower*qty*gameData.bMM
+    gameData.OneDimeEnergy-=gameData.OneDimeParticleCost*qty*gameData.bMM
     document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle.toExponential(1) +"("+((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toExponential(1)+")"
     document.getElementById("CMC2").innerHTML="Particle Count: "+gameData.OneDimeParticle.toExponential(1) +"("+((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toExponential(1)+")"
     document.getElementById("EC").innerHTML="Energy Count: "+gameData.OneDimeEnergy.toExponential(1)+". You gain "+((gameData.OneDimeGodAura*10*10)+gameData.OneDimeAtom1*100*gameData.OneDimeGodAura).toExponential(1)+"E/s"
         }
-        else if(((gameData.OneDimeAtom1*100)+qty*bMM+gameData.OneDimeParticle)>=gameData.OneDimeLength){
+        else if(((gameData.OneDimeAtom1*100)+qty*gameData.bMM+gameData.OneDimeParticle)>=gameData.OneDimeLength){
             alert("You need to make the universe longer for you to produce more matter")
         }
     }
-    else if(gameData.OneDimeEnergy<gameData.OneDimeParticleCost*qty*bMM){
+    else if(gameData.OneDimeEnergy<gameData.OneDimeParticleCost*qty*gameData.bMM){
         alert("You need more energy to make matter")
     }
 }
 
-var bMM=1
 function buyMultiOneDimeMatter(){
 var a=prompt("Please enter a positive whole number.")
 if(a*1>=1){
-    bMM=(a*1).toFixed(0)
-    document.getElementById("1DParticle").innerHTML= (1*bMM).toExponential(1)+" Particle for "+(100*bMM).toExponential(1)+" energy"
-    document.getElementById("1DParticle10").innerHTML= (10*bMM).toExponential(1)+" Particle for "+(1000*bMM).toExponential(1)+" energy"
-    document.getElementById("1DParticle100").innerHTML= (100*bMM).toExponential(1)+" Particle for "+(10000*bMM).toExponential(1)+" energy"
-    document.getElementById("1DbuyMultiParticle").innerHTML= "Buy Multi, Current Multi: "+(1*bMM).toExponential(1)
+    gameData.bMM=(a*1).toFixed(0)
+    document.getElementById("1DParticle").innerHTML= (1*gameData.bMM).toExponential(1)+" Particle for "+(100*gameData.bMM).toExponential(1)+" energy"
+    document.getElementById("1DParticle10").innerHTML= (10*gameData.bMM).toExponential(1)+" Particle for "+(1000*gameData.bMM).toExponential(1)+" energy"
+    document.getElementById("1DParticle100").innerHTML= (100*gameData.bMM).toExponential(1)+" Particle for "+(10000*gameData.bMM).toExponential(1)+" energy"
+    document.getElementById("1DbuyMultiParticle").innerHTML= "Buy Multi, Current Multi: "+(1*gameData.bMM).toExponential(1)
 }
 else{
     alert("Please try again.")
@@ -59,25 +45,24 @@ onclick=setInterval(function(){if(gameData.OneDimeDM>1){
 },1000)
 
 function gainOneDimeDMatter(qty){
-    if(gameData.OneDimeEnergy>=gameData.OneDimeDMCost*qty*bMDM){
-        gameData.OneDimeDM+=gameData.OneDimeDMGain*gameData.OneDimeGodPower*qty*bMDM
-        gameData.OneDimeEnergy-=gameData.OneDimeDMCost*qty*bMDM
+    if(gameData.OneDimeEnergy>=gameData.OneDimeDMCost*qty*gameData.bMDM){
+        gameData.OneDimeDM+=gameData.OneDimeDMGain*gameData.OneDimeGodPower*qty*gameData.bMDM
+        gameData.OneDimeEnergy-=gameData.OneDimeDMCost*qty*gameData.bMDM
     }
-    else if(gameData.OneDimeEnergy<gameData.OneDimeDMCost*qty*bMDM){
+    else if(gameData.OneDimeEnergy<gameData.OneDimeDMCost*qty*gameData.bMDM){
         alert("You need more energy to make dark matter")
     }
     document.getElementById("dmtxt").innerHTML="Dark Matter, its what makes your universe expand. But there isn't enough. How about you make some!<br>Total Dark Matter: "+gameData.OneDimeDM.toExponential(1)
 }
 
-var bMDM=1
 function buyMultiOneDimeDM(){
 var a=prompt("Please enter a positive whole number.")
 if(a*1>=1){
-    bMDM=(a*1).toFixed(0)
-    document.getElementById("1DDP").innerHTML= (0.1*bMDM).toExponential(1)+" Dark Matter for "+(100*bMDM).toExponential(1)+" energy"
-    document.getElementById("1DDP10").innerHTML= (1*bMDM).toExponential(1)+" Dark Matter for "+(1000*bMDM).toExponential(1)+" energy"
-    document.getElementById("1DDP100").innerHTML= (10*bMDM).toExponential(1)+" Dark Matter for "+(10000*bMDM).toExponential(1)+" energy"
-    document.getElementById("1DbuyMultiDm").innerHTML= "Buy Multi, Current Multi: "+(1*bMDM).toExponential(1)
+    gameData.bMDM=(a*1).toFixed(0)
+    document.getElementById("1DDP").innerHTML= (0.1*gameData.bMDM).toExponential(1)+" Dark Matter for "+(100*gameData.bMDM).toExponential(1)+" energy"
+    document.getElementById("1DDP10").innerHTML= (1*gameData.bMDM).toExponential(1)+" Dark Matter for "+(1000*gameData.bMDM).toExponential(1)+" energy"
+    document.getElementById("1DDP100").innerHTML= (10*gameData.bMDM).toExponential(1)+" Dark Matter for "+(10000*gameData.bMDM).toExponential(1)+" energy"
+    document.getElementById("1DbuyMultiDm").innerHTML= "Buy Multi, Current Multi: "+(1*gameData.bMDM).toExponential(1)
 }
 else{
     alert("Please try again.")

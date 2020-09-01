@@ -1,9 +1,31 @@
+/*matter/length bar*/
 #myProgress {
     width: 1000px;
     background-color: rgb(172, 0, 172);
   }
   
   #myBar {
+    width: 1px;
+    height: 30px;
+    background-color: lightblue;
+    text-align: center; 
+    line-height: 30px;
+    color: white;
+  }
+/*matter/length/2nd dimension*/
+  #my2dimension {
+    width: 1000px;
+    height: 30px;
+    background-color: red;
+  }
+
+  #myProgress2 {
+    width: 1px;
+    height: 30px;
+    background-color: rgb(172, 0, 172);
+  }
+  
+  #myBar2 {
     width: 1px;
     height: 30px;
     background-color: lightblue;
