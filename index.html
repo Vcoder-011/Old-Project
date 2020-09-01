@@ -22,41 +22,59 @@
         <br>
         <h3 id="PercentTill2D" style="color:red">You are currently 0% until you can access the second dimension!</h3>
         <br>
-        <p id="CMC" style="color:lightblue;">Particle Count: 0(0)</p>
+        <p id="CMC" style="color:lightblue;">Particle Count: 0.0e+0(0.0e+0)</p>
         <br>
-        <p id="EC" style="color:gold">Energy Count: 0. You gain 0E/s</p>
+        <p id="EC" style="color:gold">Energy Count: 0.0e+0. You gain 0.0e+0E/s</p>
         <br>
-        <p id="LoTU" style="color:rgb(172, 0, 172)">Length of the Universe: 100 Meters. You gain 0M/s</p>
+        <p id="LoTU" style="color:rgb(172, 0, 172)">Length of the Universe: 1.0e+2 Meters. You gain 0.0e+0M/s</p>
         <div id="myProgress">
             <div id="myBar">0%</div>
           </div>
         <br>
         <p>Matter, its what makes up your universe. But there isn't enough. How about you make some!<br>Tip: Hold down enter to buy lots of particles!</p>
-        <button id="1DParticle" onclick="gainOneDimeMatter(1)">1 Particle for 100 energy</button>
-        <button id="1DParticle10" onclick="gainOneDimeMatter(10)">10 Particle for 1000 energy</button>
-        <button id="1DParticle100" onclick="gainOneDimeMatter(100)">100 Particle for 10000 energy</button>
+        <button id="1DParticle" onclick="gainOneDimeMatter(1)" style="background-color:red">1.0e+0 Particle for 1.0e+2 energy</button>
+        <button id="1DParticle10" onclick="gainOneDimeMatter(10)" style="background-color:red">1.0e+1 Particle for 1.0e+3 energy</button>
+        <button id="1DParticle100" onclick="gainOneDimeMatter(100)" style="background-color:red">1.0e+2 Particle for 1.0e+4 energy</button>
         <br>
         <br>
-        <button id="1DbuyMultiParticle" onclick="buyMultiOneDimeMatter()">Buy Multi, Current Multi: 1</button>
-        <br>
-        <p id="dmtxt">Dark Matter, its what makes your universe expand. But there isn't enough. How about you make some!<br>Total Dark Matter:0</p>
-        <button id="1DDP" onclick="gainOneDimeDMatter(1)">0.1 Dark Matter for 100 energy </button>
-        <button id="1DDP10" onclick="gainOneDimeDMatter(10)">1 Dark Matter for 1000 energy </button>
-        <button id="1DDP100" onclick="gainOneDimeDMatter(100)">10 Dark Matter for 10000 energy </button>
+        <button id="1DbuyMultiParticle" onclick="buyMultiOneDimeMatter()" style="background-color: lightblue">Buy Multi, Current Multi: 1.0e+0</button>
         <br>
         <br>
-        <button id="1DbuyMultiDm" onclick="buyMultiOneDimeDM()">Buy Multi, Current Multi: 1 NOTE: THIS DOES NOT WORK QUITE YET</button>
+        <p id="dmtxt">Dark Matter, its what makes your universe expand. But there isn't enough. How about you make some!<br>Total Dark Matter:0.0e+0</p>
+        <button id="1DDP" onclick="gainOneDimeDMatter(1)" style="background-color:red">1.0e-1 Dark Matter for 1.0e+2 energy </button>
+        <button id="1DDP10" onclick="gainOneDimeDMatter(10)" style="background-color:red">1.0e+0 Dark Matter for 1e+3 energy </button>
+        <button id="1DDP100" onclick="gainOneDimeDMatter(100)" style="background-color:red">1.0e+1 Dark Matter for 1e+4 energy </button>
+        <br>
+        <br>
+        <button id="1DbuyMultiDm" onclick="buyMultiOneDimeDM()" style="background-color:rgb(172, 0, 172)">Buy Multi, Current Multi: 1.0e+0 </button>
     </div>
     <div id="atomMenu">
-        <p id="CMC2" style="color:lightblue;">Particle Count: 0(0)</p>
+        <p id="CMC2" style="color:lightblue;">Particle Count: 0.0+e0(0.0+e0)</p>
         <h3 style="color:white; border:2px solid white; height:50px;width:1020px;">Atoms are objects you can make with particles. The first atom can produce gravitational energy that you can make into energy. <br>The second atom will produce atom one and third will produce second, and so on and so forth.</h3>
-        <p id="atom1">Atom 1 is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 100E/s</p> 
-        <p id="atomtotal">Total Atoms: 0</p>
-        <button id="atom01" onclick="formAtom1(1)">Form 1 Atom 1 for 100 particles</button>
-        <button id="atom0110" onclick="formAtom1(10)">Form 10 Atom 1 for 1000 particles</button>
-        <button id="atom01100" onclick="formAtom1(100)">Form 100 Atom 1 for 10000 particles</button>
+        <p id="atom1">Atom 1 is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 1.0e+2E/s</p> 
+        <p id="atomtotal" style="color:rgb(17, 0, 255)">Total Atoms: 0.0e+0</p>
+        <button id="atom01" onclick="formAtom1(1)">Form 1.0e+0 Atom 1 for 1.0e+2 particles</button>
+        <button id="atom0110" onclick="formAtom1(10)">Form 1.0e+1 Atom 1 for 1.0e+3 particles</button>
+        <button id="atom01100" onclick="formAtom1(100)">Form 1.0e+2 Atom 1 for 1.0e+4 particles</button>
         <br>
-        <button id="atom001" onclick="Atom1Rename()">Rename Atom 1!</button>
+        <br>
+        <button id="bmatom" onclick="buyMultiOneAtom()" style="background-color:rgb(17, 0, 255)">Buy Multi, Current Multi: 1.0e+0 </button>
+        <br>
+        <br>
+        <button id="atom001" onclick="Atom1Rename()" style="background-color:rgb(17, 0, 255)">Rename Atom 1!</button>
+        <br>
+        <br>
+        <p id="atom2">Atom 1 is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 1.0e+2E/s</p> 
+        <p id="atomtotal2" style="color:rgb(17, 0, 220)">Total Atoms: 0.0e+0</p>
+        <button id="atom02" onclick="formAtom2(1)">Form 1.0e+0 Atom 2 for 1.0e+12 particles</button>
+        <button id="atom0210" onclick="formAtom2(10)">Form 1.0e+1 Atom 2 for 1.0e+13 particles</button>
+        <button id="atom02100" onclick="formAtom2(100)">Form 1.0e+2 Atom 2 for 1.0e+14 particles</button>
+        <br>
+        <br>
+        <button id="bmatom2" onclick="buyMultiOneAtom2()" style="background-color:rgb(17, 0, 220)">Buy Multi, Current Multi: 1.0e+0 </button>
+        <br>
+        <br>
+        <button id="atom002" onclick="Atom2Rename()" style="background-color:rgb(17, 0, 220)">Rename Atom 2!</button>
     </div>
         <script src="JS/main.js"></script>
         <script src="JS/Atoms.js"></script>
