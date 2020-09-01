@@ -39,7 +39,7 @@ document.getElementById("atom001").innerHTML="Rename "+atomprompt1
 
 onclick=setInterval(formingAtom1, 100)
 function formingAtom1(){
-    if(((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)<=gameData.OneDimeLength){
+    if(((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle+1e9)<=gameData.OneDimeLength){
     gameData.OneDimeAtom1+=1e9*gameData.OneDimeAtom2
     document.getElementById("atomtotal").innerHTML="Total Atoms: "+gameData.OneDimeAtom1.toExponential(1)
     }
@@ -75,7 +75,7 @@ else{
 var atomprompt2="Atom 2"
 function Atom2Rename(){
 atomprompt2=prompt("What would you like to name your atom?")
-document.getElementById("atom2").innerHTML=atomprompt1+" is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 100E/s"
+document.getElementById("atom2").innerHTML=atomprompt2+" is a very small line of particles that is big enough to casue the formatiln of gravity. You can use this gravity and turn it into energy. Each atom produces 100E/s"
 document.getElementById("atom02").innerHTML="Form "+(1*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e12*bMA2).toExponential(1)+" particles"
 document.getElementById("atom0210").innerHTML="Form "+(10*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e13*bMA2).toExponential(1)+" particles"
 document.getElementById("atom02100").innerHTML="Form "+(100*bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e14*bMA2).toExponential(1)+" particles"

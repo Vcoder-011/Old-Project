@@ -23,7 +23,7 @@ bMA2=1
 onclick=setInterval(greenboxes, 10)
 function greenboxes(){
   //Matter \/ \/ \/
-  if(gameData.OneDimeParticle+(gameData.OneDimeAtom1*100)+(1*bMM)<=gameData.OneDimeLength){
+  if(((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle+(1*bMM))<=gameData.OneDimeLength){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*(1*bMM)){
     var tag=document.getElementById("1DParticle")
     tag.style.background="green"
@@ -33,7 +33,7 @@ function greenboxes(){
     tag.style.background="red"
   }
 }
-if(gameData.OneDimeParticle+(gameData.OneDimeAtom1*100)+(10*bMM)<=gameData.OneDimeLength){
+if(((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)+(10*bMM)<=gameData.OneDimeLength){
    if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*(10*bMM)){
    var tag=document.getElementById("1DParticle10")
    tag.style.background="green"
@@ -43,7 +43,7 @@ if(gameData.OneDimeParticle+(gameData.OneDimeAtom1*100)+(10*bMM)<=gameData.OneDi
    tag.style.background="red"
   }
 }
-if(((gameData.OneDimeAtom1*100)+100*bMM+gameData.OneDimeParticle)<=gameData.OneDimeLength){
+if(((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle)+(100*bMM)<=gameData.OneDimeLength){
   if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*(100*bMM)){
   var tag=document.getElementById("1DParticle100")
   tag.style.background="green"
