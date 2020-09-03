@@ -33,3 +33,7 @@
     line-height: 30px;
     color: white;
   }
+
+  #myBody {
+    background: linear-gradient(to bottom, #3c3f41 50%, #750000 100%);
+}

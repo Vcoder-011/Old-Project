@@ -11,16 +11,17 @@
         </style>
     </head>
 
-    <body style="background-color: #3c3f41;">
+    <body id="myBody">
         <h1 style="color:red; border: 2px solid white; padding: 10px">Dimension Breaker Idle</h1>
         <div id="navigateButtons">
             <button onclick="tab('mainMenu')">Go to Main Menu</button>
             <button onclick="tab('atomMenu')">Go to Atom Menu</button>
+            <button id="hGP" onclick="tab('godParticleMenu')">Go to God Particle Menu</button>
           </div>
     <div id="mainMenu">
         <p>You are a 1st dimenesional god like entity. You don't know why you are here but you know you don't like being only long, you want width and height and even more!<br> You can make matter/darkmatter with the engery that produces from your body. It is little now, but with time you can produce more energy and produce more matter. <br>(Little note:The laws of the universe do not apply to you.)</p>
         <br>
-        <h3 id="PercentTill2D" style="color:red">You are currently 0% until you can access the second dimension!</h3>
+        <h3 id="PercentTill2D" style="color:red">You are currently 0.000% until you can access the second dimension!</h3>
         <div id="my2dimension">
             <div id="myProgress2">
                 <div id="myBar2">0%</div>
@@ -80,6 +81,10 @@
         <br>
         <br>
         <button id="atom002" onclick="Atom2Rename()" style="background-color:rgb(17, 0, 220)">Rename Atom 2!</button>
+    </div>
+    <div id="godParticleMenu">
+        <p>place holder
+        </p>
     </div>
         <script src="JS/main.js"></script>
         <script src="JS/progress-bars.js"></script>

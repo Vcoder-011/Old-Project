@@ -15,7 +15,7 @@ function formAtom1(qty){
 function buyMultiOneAtom(){
 var a=prompt("Please enter a positive whole number.")
 if(a*1>=1){
-    bMA=(a*1).toFixed(0)
+    gameData.bMA=(a*1).toFixed(0)
     document.getElementById("atom01").innerHTML= "Form "+(1*gameData.bMA).toExponential(1)+" "+atomprompt1+" for "+(100*gameData.bMA).toExponential(1)+" particles"
     document.getElementById("atom0110").innerHTML= "Form "+(10*gameData.bMA).toExponential(1)+" "+atomprompt1+" for "+(1000*gameData.bMA).toExponential(1)+" particles"
     document.getElementById("atom01100").innerHTML= "Form "+(100*gameData.bMA).toExponential(1)+" "+atomprompt1+" for "+(10000*gameData.bMA).toExponential(1)+" particles"
@@ -61,7 +61,7 @@ function formAtom2(qty){
 function buyMultiOneAtom2(){
 var a=prompt("Please enter a positive whole number.")
 if(a*1>=1){
-    bMA2=(a*1).toFixed(0)
+    gameData.bMA2=(a*1).toFixed(0)
     document.getElementById("atom02").innerHTML= "Form "+(1*gameData.bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e12*gameData.bMA2).toExponential(1)+" particles"
     document.getElementById("atom0210").innerHTML= "Form "+(10*gameData.bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e13*gameData.bMA2).toExponential(1)+" particles"
     document.getElementById("atom02100").innerHTML= "Form "+(100*gameData.bMA2).toExponential(1)+" "+atomprompt2+" for "+(1e14*gameData.bMA2).toExponential(1)+" particles"

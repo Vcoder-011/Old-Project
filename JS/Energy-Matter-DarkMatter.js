@@ -8,14 +8,14 @@ function energyClock(){
 //matter
 function gainOneDimeMatter(qty){
     if(gameData.OneDimeEnergy>=gameData.OneDimeParticleCost*qty*gameData.bMM){
-        if(((gameData.OneDimeAtom1*100)+qty*gameData.bMM+gameData.OneDimeParticle)<=gameData.OneDimeLength){
+        if((gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100)+(gameData.OneDimeAtom2*1e12)+qty*gameData.bMM)<=gameData.OneDimeLength){
     gameData.OneDimeParticle+=gameData.OneDimeParticleGain*gameData.OneDimeGodPower*qty*gameData.bMM
     gameData.OneDimeEnergy-=gameData.OneDimeParticleCost*qty*gameData.bMM
     document.getElementById("CMC").innerHTML="Particle Count: "+gameData.OneDimeParticle.toExponential(1) +"("+((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toExponential(1)+")"
     document.getElementById("CMC2").innerHTML="Particle Count: "+gameData.OneDimeParticle.toExponential(1) +"("+((gameData.OneDimeAtom2*1e12)+(gameData.OneDimeAtom1*100)+gameData.OneDimeParticle).toExponential(1)+")"
     document.getElementById("EC").innerHTML="Energy Count: "+gameData.OneDimeEnergy.toExponential(1)+". You gain "+((gameData.OneDimeGodAura*10*10)+gameData.OneDimeAtom1*100*gameData.OneDimeGodAura).toExponential(1)+"E/s"
         }
-        else if(((gameData.OneDimeAtom1*100)+qty*gameData.bMM+gameData.OneDimeParticle)>=gameData.OneDimeLength){
+        else if((gameData.OneDimeParticle+1+(gameData.OneDimeAtom1*100)+(gameData.OneDimeAtom2*1e12)+qty*gameData.bMM)>=gameData.OneDimeLength){
             alert("You need to make the universe longer for you to produce more matter")
         }
     }
